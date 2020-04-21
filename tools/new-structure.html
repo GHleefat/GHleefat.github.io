@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>新版驹马后台公共组件架构升级方案 | leefat</title>
+    <meta name="description" content="思绪集散中心">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.bd3b0c2c.css" as="style"><link rel="preload" href="/assets/js/app.61a1e535.js" as="script"><link rel="preload" href="/assets/js/2.067ed6be.js" as="script"><link rel="preload" href="/assets/js/16.7fa9f87a.js" as="script"><link rel="prefetch" href="/assets/js/10.a4aeed17.js"><link rel="prefetch" href="/assets/js/11.473697c0.js"><link rel="prefetch" href="/assets/js/12.eae57d5d.js"><link rel="prefetch" href="/assets/js/13.fb34779c.js"><link rel="prefetch" href="/assets/js/14.a23273b4.js"><link rel="prefetch" href="/assets/js/15.beebe917.js"><link rel="prefetch" href="/assets/js/17.cdbf9a5a.js"><link rel="prefetch" href="/assets/js/18.f4fc0604.js"><link rel="prefetch" href="/assets/js/19.edd52001.js"><link rel="prefetch" href="/assets/js/3.a0d2ed9d.js"><link rel="prefetch" href="/assets/js/4.e4752e2a.js"><link rel="prefetch" href="/assets/js/5.5a9124e9.js"><link rel="prefetch" href="/assets/js/6.fb0f6784.js"><link rel="prefetch" href="/assets/js/7.60f0056b.js"><link rel="prefetch" href="/assets/js/8.2a13ba29.js"><link rel="prefetch" href="/assets/js/9.ad69a8a3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bd3b0c2c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">leefat</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/points/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link router-link-active">
+  工具
+</a></div><div class="nav-item"><a href="https://github.com/GHleefat" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/points/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link router-link-active">
+  工具
+</a></div><div class="nav-item"><a href="https://github.com/GHleefat" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工具</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tools/juma-cli.html" class="sidebar-link">搭建脚手架</a></li><li><a href="/tools/npm-private-library.html" class="sidebar-link">npm私库搭建</a></li><li><a href="/tools/submit-rule.html" class="sidebar-link">代码提交规范</a></li><li><a href="/tools/new-structure.html" class="active sidebar-link">新版驹马后台公共组件架构升级方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tools/new-structure.html#现有框架模式" class="sidebar-link">现有框架模式</a></li><li class="sidebar-sub-header"><a href="/tools/new-structure.html#现有架构的缺点" class="sidebar-link">现有架构的缺点</a></li><li class="sidebar-sub-header"><a href="/tools/new-structure.html#新架构对比现有架构的优点" class="sidebar-link">新架构对比现有架构的优点</a></li><li class="sidebar-sub-header"><a href="/tools/new-structure.html#新版公共组件对前端效率的提升可以从哪些方面体现出来" class="sidebar-link">新版公共组件对前端效率的提升可以从哪些方面体现出来</a></li><li class="sidebar-sub-header"><a href="/tools/new-structure.html#新版公共组件的质量问题怎么保证" class="sidebar-link">新版公共组件的质量问题怎么保证</a></li><li class="sidebar-sub-header"><a href="/tools/new-structure.html#旧版本能否平滑过渡到新版本？或者说各业务系统较小影响的情况下使用新版本" class="sidebar-link">旧版本能否平滑过渡到新版本？或者说各业务系统较小影响的情况下使用新版本</a></li><li class="sidebar-sub-header"><a href="/tools/new-structure.html#旧版本切换到新版本会对各业务系统造成什么样的影响，各业务系统前端需要配合做些什么" class="sidebar-link">旧版本切换到新版本会对各业务系统造成什么样的影响，各业务系统前端需要配合做些什么</a></li><li class="sidebar-sub-header"><a href="/tools/new-structure.html#初步的里程碑计划" class="sidebar-link">初步的里程碑计划</a></li></ul></li><li><a href="/tools/postman.html" class="sidebar-link">postman离线安装</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="新版驹马后台公共组件架构升级方案"><a href="#新版驹马后台公共组件架构升级方案" class="header-anchor">#</a> 新版驹马后台公共组件架构升级方案</h1> <h2 id="现有框架模式"><a href="#现有框架模式" class="header-anchor">#</a> 现有框架模式</h2> <ul><li>引入模式
+业务系统固定引入公共组件加载js地址-scripts-loader.js,进行公共组件的注册</li></ul> <h2 id="现有架构的缺点"><a href="#现有架构的缺点" class="header-anchor">#</a> 现有架构的缺点</h2> <ul><li>缺乏文档说明<br>
+组件的属性需要从源码中自己查看，提供的工具类方法也需要从源码查看</li> <li>二次封装不全面<br>
+部分iview提供的属性，封装后的组件并不能使用</li> <li>基础环境升级困难,用不了组件的新特性<br>
+目前组件是基于iview2.0版本封装的，此版本官方已经宣布不再维护</li> <li>新启项目慢<br>
+目前没有完善的整套直接可复用框架，新建项目配置很花时间，且方式不一</li></ul> <h2 id="新架构对比现有架构的优点"><a href="#新架构对比现有架构的优点" class="header-anchor">#</a> 新架构对比现有架构的优点</h2> <ul><li>代码优化<br>
+按需加载，减少冗余代码</li> <li>便利性<br>
+灵活升级，引用私库npm方式，组件进行版本管理，可灵活发布与升级</li> <li>规范化<br>
+接口约束，引入基于promise的axios组件库，对接口的调用方式进行统一</li> <li>其它(建议)<br>
+自建脚手架，GraphQL，接口查询层</li></ul> <h2 id="新版公共组件对前端效率的提升可以从哪些方面体现出来"><a href="#新版公共组件对前端效率的提升可以从哪些方面体现出来" class="header-anchor">#</a> 新版公共组件对前端效率的提升可以从哪些方面体现出来</h2> <ul><li>所见即所得<br>
+所使用的属性与文档一致，减少查看源码的时间</li> <li>接口统一管理<br>
+减少在各个系统查找接口的时间</li> <li>组件更新无障碍
+当业务有特殊需求可以自行发布npm包，不必等待公共组件发布</li></ul> <h2 id="新版公共组件的质量问题怎么保证"><a href="#新版公共组件的质量问题怎么保证" class="header-anchor">#</a> 新版公共组件的质量问题怎么保证</h2> <ul><li>单元测试<br>
+对公共方法进行单元测试，特别是工具类函数</li> <li>发布前测试
+需要测试资源对即将发布的组件进行测试</li></ul> <h2 id="旧版本能否平滑过渡到新版本？或者说各业务系统较小影响的情况下使用新版本"><a href="#旧版本能否平滑过渡到新版本？或者说各业务系统较小影响的情况下使用新版本" class="header-anchor">#</a> 旧版本能否平滑过渡到新版本？或者说各业务系统较小影响的情况下使用新版本</h2> <ul><li>可以平滑过度<br>
+主要的更改在公共组件的项目中</li></ul> <h2 id="旧版本切换到新版本会对各业务系统造成什么样的影响，各业务系统前端需要配合做些什么"><a href="#旧版本切换到新版本会对各业务系统造成什么样的影响，各业务系统前端需要配合做些什么" class="header-anchor">#</a> 旧版本切换到新版本会对各业务系统造成什么样的影响，各业务系统前端需要配合做些什么</h2> <ul><li>使用vue plugin的方式引入新旧组件<br>
+业务系统需要更改一下调用组件的前缀</li></ul> <h2 id="初步的里程碑计划"><a href="#初步的里程碑计划" class="header-anchor">#</a> 初步的里程碑计划</h2> <ul><li>私有库的使用<br>
+搭建好npm私有库并启用</li> <li>接口统一管理<br>
+引入axios，并用统一文件进行管理</li> <li>新公共组件的封装准备<br>
+统计出需要更新的旧公共组件并制定更新计划</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">12/2/2019, 11:39:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tools/submit-rule.html" class="prev">
+        代码提交规范
+      </a></span> <span class="next"><a href="/tools/postman.html">
+        postman离线安装
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.61a1e535.js" defer></script><script src="/assets/js/2.067ed6be.js" defer></script><script src="/assets/js/16.7fa9f87a.js" defer></script>
+  </body>
+</html>
